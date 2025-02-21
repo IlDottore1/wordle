@@ -1,3 +1,5 @@
-res://Scenes/main_menu.tscn
-res://Recources/theme.tres
+res://Scripts/game.gd
 res://Scenes/Game.tscn
+res://Recources/theme.tres
+res://Scripts/words.gd
+res://Scenes/main_menu.tscn

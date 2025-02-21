@@ -8,20 +8,35 @@ var word = "HOUSE"
 var keys : Dictionary = {}
 var cells : Array = [{}, {}, {}, {}, {}, {}]
 var lines = [0,0,0,0,0,0]
+var let = ["Q",'W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M']
 
 func _ready() -> void:
 	for i in $KeyBoard/Grid/Line1.get_children():
-		keys[i] = "grey"
+		keys[i] = "no"
 	for i in $KeyBoard/Grid/Line2.get_children():
-		keys[i] = "grey"
+		keys[i] = "no"
 	for i in $KeyBoard/Grid/MarginContainer/Line3.get_children():
-		keys[i] = "grey"
+		keys[i] = "no"
 	
 	var x = $Cells.get_children()
 	for i in range(len(x)):
 		cells[int(i/5)][x[i]] = 0
+	
+	randomize()
+	word = Words.words[randi() % 663]
+	
 
-# СДЕЛАТЬ ПРОВЕРКУ НА ТО ОСТАЛИСЬ ЛИ СВОБОДНЫЕ СТРОКИ ЧТОБЫ НЕ ВЫЛЕЗАЛА ОШИБКА
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		var e = OS.get_keycode_string(event.keycode).to_upper()
+		if e in let:
+			key_click(e)
+		elif e == "BACKSPACE":
+			delete()
+		elif e == "ENTER":
+			enter()
+	
+
 func key_click(s : String) -> void:
 	var x = cells[lines.find(0)].find_key(0)
 	if x: # если еще есть свободные слоты
@@ -65,11 +80,18 @@ func enter() -> void:
 					var k
 					for j in keys:
 						if j.name == "Button"+s: k = j; break
-					if keys[k] == "grey":
+					if keys[k] == "no":
 						keys[k] = "yellow"
 						k.self_modulate = yellow
 					
 					x.keys()[i].self_modulate = yellow
+			else:
+				var k
+				for j in keys:
+					if j.name == "Button"+s: k = j; break
+				keys[k] = "grey"
+				k.self_modulate = grey
+		
 		if c == 5:
 			end_game(true)
 		else:
@@ -77,8 +99,13 @@ func enter() -> void:
 				end_game(false)
 
 func end_game(b : bool) -> void:
+	$EndGame.visible = true
+	$EndGame/word.text = word
 	if b: # если игрок выиграл
 		pass
-	else: # если игрок проигралz
+	else: # если игрок проиграл
 		pass
-	
+
+
+func _on_new_game_button_down() -> void:
+	get_tree().reload_current_scene()
