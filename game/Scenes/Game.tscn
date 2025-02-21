@@ -1,0 +1,1021 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ryjitt0gf4l"]
+
+[ext_resource type="Script" path="res://Scripts/key_board.gd" id="1_f2nec"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_wh55y"]
+[ext_resource type="Theme" uid="uid://cog61r4le62l4" path="res://Recources/theme.tres" id="3_tkwgq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_81er0"]
+font_size = 32
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wh55y")
+green = Color(0.568627, 1, 0.678431, 1)
+yellow = Color(1, 0.92549, 0.439216, 1)
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.834931, 0.834931, 0.834931, 1)
+
+[node name="Cells" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -256.0
+offset_right = 152.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="Cell1" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell2" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell3" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell4" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell5" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell6" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell7" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell8" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell9" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell10" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell11" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell12" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell13" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell14" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell15" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell16" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell16"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell17" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell17"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell18" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell18"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell19" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell19"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell20" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell20"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell21" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell21"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell22" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell22"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell23" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell23"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell24" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell24"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell25" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell25"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell26" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell26"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell27" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell27"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell28" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell28"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell29" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell29"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cell30" type="ColorRect" parent="Cells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.730946, 0.752456, 0.783184, 1)
+
+[node name="Label" type="Label" parent="Cells/Cell30"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -28.5
+offset_right = 28.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_81er0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyBoard" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2nec")
+
+[node name="Grid" type="GridContainer" parent="KeyBoard"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = -188.0
+offset_right = -122.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Line1" type="GridContainer" parent="KeyBoard/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 10
+
+[node name="ButtonQ" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "Q"
+
+[node name="ButtonW" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "W"
+
+[node name="ButtonE" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "E"
+
+[node name="ButtonR" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "R"
+
+[node name="ButtonT" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "T"
+
+[node name="ButtonY" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "Y"
+
+[node name="ButtonU" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "U"
+
+[node name="ButtonI" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "I"
+
+[node name="ButtonO" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "O"
+
+[node name="ButtonP" type="Button" parent="KeyBoard/Grid/Line1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "P"
+
+[node name="Line2" type="GridContainer" parent="KeyBoard/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 9
+
+[node name="ButtonA" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "A"
+
+[node name="ButtonS" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "S"
+
+[node name="ButtonD" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "D"
+
+[node name="ButtonF" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "F"
+
+[node name="ButtonG" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "G"
+
+[node name="ButtonH" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "H"
+
+[node name="ButtonJ" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "J"
+
+[node name="ButtonK" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "K"
+
+[node name="ButtonL" type="Button" parent="KeyBoard/Grid/Line2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "L"
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyBoard/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+
+[node name="Line3" type="GridContainer" parent="KeyBoard/Grid/MarginContainer"]
+layout_mode = 2
+columns = 7
+
+[node name="ButtonZ" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "Z"
+
+[node name="ButtonX" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "X"
+
+[node name="ButtonC" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "C"
+
+[node name="ButtonV" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "V"
+
+[node name="ButtonB" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "B"
+
+[node name="ButtonN" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "N"
+
+[node name="ButtonM" type="Button" parent="KeyBoard/Grid/MarginContainer/Line3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_tkwgq")
+text = "M"
+
+[node name="ButtonDelete" type="Button" parent="KeyBoard"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = -76.0
+offset_right = 268.0
+offset_bottom = -24.0
+grow_vertical = 0
+theme = ExtResource("3_tkwgq")
+text = "⌫"
+
+[node name="ButtonEnter" type="Button" parent="KeyBoard"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -268.0
+offset_top = -76.0
+offset_right = -122.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_tkwgq")
+text = "Enter"
+
+[node name="EndGame" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="EndGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1.16567e-08, 0.0196036, 0.032302, 0.392157)
+
+[node name="Label" type="Label" parent="EndGame"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -171.0
+offset_top = 43.0
+offset_right = 171.0
+offset_bottom = 137.0
+grow_horizontal = 2
