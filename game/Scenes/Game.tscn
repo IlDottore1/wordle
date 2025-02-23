@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5ryjitt0gf4l"]
+[gd_scene load_steps=13 format=3 uid="uid://5ryjitt0gf4l"]
 
 [ext_resource type="Script" path="res://Scripts/key_board.gd" id="1_f2nec"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_wh55y"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_81er0"]
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_2uv61"]
+font_size = 46
+outline_size = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_r6yw3"]
 font_size = 32
@@ -15,6 +19,72 @@ font_size = 54
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8okb"]
 bg_color = Color(0.6072, 0.63008, 0.66, 0.666667)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w0imc"]
+font_size = 32
+font_color = Color(0.611319, 0.643495, 0.696686, 1)
+
+[sub_resource type="Animation" id="Animation_oiifh"]
+resource_name = "show"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 5), Vector2(0, 0), Vector2(0, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_tlvfk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r13ow"]
+_data = {
+"RESET": SubResource("Animation_tlvfk"),
+"show": SubResource("Animation_oiifh")
+}
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -1019,15 +1089,30 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.3626, 0.41356, 0.49, 0.647059)
 
+[node name="state" type="Label" parent="EndGame"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 97.0
+offset_right = 92.0
+offset_bottom = 161.0
+grow_horizontal = 2
+text = "Победа!"
+label_settings = SubResource("LabelSettings_2uv61")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="EndGame"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -171.0
-offset_top = 66.0
+offset_top = 181.0
 offset_right = 171.0
-offset_bottom = 123.0
+offset_bottom = 238.0
 grow_horizontal = 2
 text = "Загаданное слово:"
 label_settings = SubResource("LabelSettings_r6yw3")
@@ -1040,9 +1125,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -196.0
-offset_top = 120.0
+offset_top = 228.0
 offset_right = 196.0
-offset_bottom = 200.0
+offset_bottom = 308.0
 grow_horizontal = 2
 text = "СЛОВО"
 label_settings = SubResource("LabelSettings_kvp2n")
@@ -1056,13 +1141,39 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.5
-offset_top = -38.5
-offset_right = 185.5
-offset_bottom = 38.5
+offset_left = -185.0
+offset_top = 7.0
+offset_right = 186.0
+offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a8okb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_a8okb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a8okb")
 text = "Новая игра"
+
+[node name="bonus" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 5.0
+offset_right = 227.0
+offset_bottom = 73.0
+text = "Бонус +0"
+label_settings = SubResource("LabelSettings_w0imc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="bonus"]
+libraries = {
+"": SubResource("AnimationLibrary_r13ow")
+}
 
 [connection signal="button_down" from="EndGame/new_game" to="." method="_on_new_game_button_down"]

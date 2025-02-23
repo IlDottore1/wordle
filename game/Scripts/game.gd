@@ -99,13 +99,33 @@ func enter() -> void:
 				end_game(false)
 
 func end_game(b : bool) -> void:
+	Menu.block = true
 	$EndGame.visible = true
 	$EndGame/word.text = word
 	if b: # если игрок выиграл
-		pass
+		$EndGame/state.text = "Победа!"
+		Menu.words += 1
+		Menu.score += 1 + Menu.bonus
+		if Menu.last_try:
+			Menu.rec += 1
+			Menu.bonus += Menu.bonus_up
+			Menu.bonus_up += 1
+			if Menu.rec > Menu.record:
+				Menu.record = Menu.rec
+		else:
+			Menu.last_try = 1
+			Menu.rec = 1
+			Menu.bonus = 1
+			$bonus.text = "Бонус +1"
+			$bonus/anim.play("show")
 	else: # если игрок проиграл
-		pass
+		$EndGame/state.text = "Поражение"
+		Menu.rec = 0
+		Menu.bonus = 0
+		Menu.bonus_up = 1
+		Menu.last_try = 0
 
 
 func _on_new_game_button_down() -> void:
+	Menu.block = false
 	get_tree().reload_current_scene()

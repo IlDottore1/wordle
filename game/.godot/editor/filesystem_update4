@@ -3,3 +3,6 @@ res://Scenes/Game.tscn
 res://Recources/theme.tres
 res://Scripts/words.gd
 res://Scenes/main_menu.tscn
+res://Scenes/menu.tscn
+res://Scripts/menu.gd
+res://Scripts/main_menu.gd

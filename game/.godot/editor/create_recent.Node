@@ -1,5 +1,7 @@
-Button
+AnimationPlayer
 Label
+CanvasLayer
+Button
 ColorRect
 Control
 MarginContainer
