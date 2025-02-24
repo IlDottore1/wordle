@@ -133,7 +133,7 @@ func _on_new_game_button_down() -> void:
 
 
 func tip() -> void:
-	Menu.score -= 1
+	if Menu.score > 0: Menu.score -= 1
 	var i = randi() % 5
 	$tips.get_child(i).text = word[i]
 	$tip.queue_free()

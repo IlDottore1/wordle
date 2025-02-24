@@ -1056,7 +1056,7 @@ offset_right = 268.0
 offset_bottom = -24.0
 grow_vertical = 0
 theme = ExtResource("3_tkwgq")
-text = "⌫"
+text = "Backspace"
 
 [node name="ButtonEnter" type="Button" parent="KeyBoard"]
 layout_mode = 1
@@ -1205,11 +1205,15 @@ text = "Подсказка
 (-1 опыт)"
 
 [node name="tips" type="GridContainer" parent="."]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 21.0
-offset_right = 727.0
-offset_bottom = 55.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.0
+offset_top = 17.0
+offset_right = 152.0
+offset_bottom = 58.0
+grow_horizontal = 2
 columns = 5
 
 [node name="l1" type="Label" parent="tips"]
