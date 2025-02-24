@@ -1,12 +1,13 @@
-AnimationPlayer
 Label
-CanvasLayer
+GridContainer
 Button
-ColorRect
 Control
+CheckButton
+CanvasLayer
+AnimationPlayer
+ColorRect
 MarginContainer
 CenterContainer
-GridContainer
 HFlowContainer
 PanelContainer
 HBoxContainer

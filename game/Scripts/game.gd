@@ -24,6 +24,7 @@ func _ready() -> void:
 	
 	randomize()
 	word = Words.words[randi() % 663]
+	print(word)
 	
 
 func _input(event: InputEvent) -> void:
@@ -67,7 +68,7 @@ func enter() -> void:
 		for i in range(len(x.keys())):
 			var s = x.keys()[i].get_node("Label").text
 			if s in word:
-				if word.find(s) == i:
+				if word[i] == s:
 					var k
 					for j in keys:
 						if j.name == "Button"+s: k = j; break
@@ -116,8 +117,8 @@ func end_game(b : bool) -> void:
 			Menu.last_try = 1
 			Menu.rec = 1
 			Menu.bonus = 1
-			$bonus.text = "Бонус +1"
-			$bonus/anim.play("show")
+			$bonus/bonus.text = "Бонус +1"
+			$bonus/bonus/anim.play("show")
 	else: # если игрок проиграл
 		$EndGame/state.text = "Поражение"
 		Menu.rec = 0
@@ -129,3 +130,10 @@ func end_game(b : bool) -> void:
 func _on_new_game_button_down() -> void:
 	Menu.block = false
 	get_tree().reload_current_scene()
+
+
+func tip() -> void:
+	Menu.score -= 1
+	var i = randi() % 5
+	$tips.get_child(i).text = word[i]
+	$tip.queue_free()
